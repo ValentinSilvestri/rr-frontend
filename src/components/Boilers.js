@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import BoilerItem from './BoilerItem';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 
 class Boilers extends Component {
@@ -13,8 +13,8 @@ class Boilers extends Component {
 
 
 // PropTypes
-Boilers.PropTypes = {
-    boilers: PropTypes.array.isRequired
+Boilers.propTypes = {
+    boilers: propTypes.array.isRequired
 }
 
 export default Boilers;

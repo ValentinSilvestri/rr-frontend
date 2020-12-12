@@ -1,52 +1,19 @@
 import React, { Component } from 'react';
 import './App.css';
 import Boilers from './components/Boilers';
+import boilers from './data/boilers.json';
 
 class App extends Component {
-  state = {
-    boilers: [
-    {     
-      id: 1,
-      description: 'Boiler 10.000Kcal/h',
-      boilerType: 'A',
-      hourMaintenanceCost: 150,
-      hourEventualCost: 225,
-      maintenanceRate: 30
-    },
-    {     
-      id: 2,
-      description: 'Boiler 10.000Kcal/h',
-      boilerType: 'B',
-      hourMaintenanceCost: 110,
-      hourEventualCost: 190,
-      maintenanceRate: 20
-    },
-    {     
-      id: 3,
-      description: 'Boiler 20.000Kcal/h',
-      boilerType: 'A',
-      hourMaintenanceCost: 200,
-      hourEventualCost: 275,
-      maintenanceRate: 20
-    },
-    {     
-      id: 4,
-      description: 'Boiler 20.000Kcal/h',
-      boilerType: 'B',
-      hourMaintenanceCost: 150,
-      hourEventualCost: 200,
-      maintenanceRate: 15
-    },
-    {     
-      id: 5,
-      description: 'Boiler 50.000Kcal/h',
-      boilerType: 'C',
-      hourMaintenanceCost: 450,
-      hourEventualCost: 700,
-      maintenanceRate: 45
-    }
-    ]
+  state = {boilers};
+
+  deleteBoiler = (id) => {
+    this.setState({boilers: [...this.state.boilers.filter(boiler => boiler.id !== id)] })
   }
+
+  // updateBoiler = (id) => {
+  //  this.forceUpdate({boilers: [...this.state.boiler.filter(boiler => boiler.id !== id)]})
+  // }
+
   render() {
     return (
       <div style = {{ display: 'flex'}}>
@@ -84,7 +51,7 @@ class App extends Component {
         </aside>
         <div style = {{ display: 'flex', flexDirection: 'column', flex: '80%', float: 'right'}}>
           <div>
-            <div style = {{background: '#ff4000', display: 'flex', flexDirection: 'row', color: '#ffffff', margin: '0px', padding: '25px', height: '75px'}}>
+            <div style = {{ background: '#ff4000', display: 'flex', flexDirection: 'row', color: '#ffffff', margin: '0px', padding: '25px', height: '75px' }}>
               <h1 style = {{ float: 'left' }}>Boilers</h1>
               <a href='#' style = {{ position: 'absolute', right: '15px', color: '#ffffff', textDecoration: 'none'}}>Log out</a>
            </div>

@@ -1,0 +1,42 @@
+[
+    {     
+      "id": 1,
+      "description": "Boiler 10.000Kcal/h",
+      "boilerType": "A",
+      "hourMaintenanceCost": 150,
+      "hourEventualCost": 225,
+      "maintenanceRate": 30
+    },
+    {     
+        "id": 2,
+        "description": "Boiler 10.000Kcal/h",
+        "boilerType": "B",
+        "hourMaintenanceCost": 110,
+        "hourEventualCost": 190,
+        "maintenanceRate": 20
+      },
+      {     
+        "id": 3,
+        "description": "Boiler 20.000Kcal/h",
+        "boilerType": "A",
+        "hourMaintenanceCost": 200,
+        "hourEventualCost": 275,
+        "maintenanceRate": 20
+      },
+      {     
+        "id": 4,
+        "description": "Boiler 20.000Kcal/h",
+        "boilerType": "B",
+        "hourMaintenanceCost": 150,
+        "hourEventualCost": 200,
+        "maintenanceRate": 15
+      },
+      {     
+        "id": 5,
+        "description": "Boiler 50.000Kcal/h",
+        "boilerType": "C",
+        "hourMaintenanceCost": 450,
+        "hourEventualCost": 700,
+        "maintenanceRate": 45
+      }
+]

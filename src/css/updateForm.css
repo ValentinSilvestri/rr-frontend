@@ -1,4 +1,4 @@
-.modal {
+#myModal {
     /*    display: block;
     */
     display: none;
@@ -18,7 +18,7 @@
     font-weight: normal;
 }
 
-.modal-content {
+#modalContent {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
@@ -26,14 +26,14 @@
     width: 80%;
 }
 
-.close {
+#close {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-.close:hover,.close:focus {
+#close:hover, #close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;

@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import BoilerItem from './BoilerItem';
 import propTypes from 'prop-types';
+import '../css/Boilers.css';
 
 class Boilers extends Component {
   render() {
     return (
       <div>
-        <table style = {{ width: '100%'}}>
+        <table>
           <caption>Boilers Records</caption>
             <tr>
               <th>Id</th>
@@ -19,7 +20,7 @@ class Boilers extends Component {
               <th>Delete</th>
             </tr>
           <tbody>
-            {this.props.boilers.map(boiler => <BoilerItem key={boiler.id} boiler={boiler}/>)}
+            {this.props.boilers.map(boiler => <BoilerItem key={boiler.id} boiler={boiler} deleteBoiler={this.props.deleteBoiler}/>)}
           </tbody>
         </table>
       </div>

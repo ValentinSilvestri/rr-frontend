@@ -1,34 +1,35 @@
 import React from 'react';
+import '../css/Aside.css';
 
 export default function Aside() {
     return (
-        <aside style = {{ display: 'flex', flexDirection: 'column', flex: '20%', float: 'left', height: 'auto'}}>
-          <div style = {{ backgroundColor:'#00004d'}}>
-            <h3 style = {{margin: '0px', padding: '25px', height: '75px', color: '#ffffff' }}>CaldAR</h3>
+        <aside>
+          <div id = 'asideDiv1'>
+            <h3 id = 'asideTitle'>CaldAR</h3>
           </div>
-          <div style = {{ backgroundColor:'#000d1a', flexGrow: '1', display: 'flex', alignItems: 'center'}}>
-            <ol style = {{ listStyleType: "none" }}>
+          <div id = 'asideDiv2'>
+            <ol>
               <h4>
-                <li style = {{ marginBottom: '10px' }}>
-                  <a href="#" style = {{ color: '#ffffff', textDecoration: 'none' }}>Buildings</a>
+                <li>
+                  <a href="/#">Buildings</a>
                 </li>
-                <li style = {{ marginBottom: '10px' }}>
-                  <a href="#" style = {{ color: '#ffffff', textDecoration: 'none'}}>Companies</a>
+                <li>
+                  <a href="/#">Companies</a>
                 </li>
-                <li style = {{ marginBottom: '10px' }}>
-                  <a href="#" style = {{ color: '#ffffff', textDecoration: 'none'}}>Boilers</a>
+                <li>
+                  <a href="/#">Boilers</a>
                 </li>
-                <li style = {{ marginBottom: '10px' }}>
-                  <a href="#" style = {{ color: '#ffffff', textDecoration: 'none'}}>Boiler Types</a>
+                <li>
+                  <a href="/#">Boiler Types</a>
                 </li>
-                <li style = {{ marginBottom: '10px' }}>
-                  <a href="#" style = {{ color: '#ffffff', textDecoration: 'none'}}>Technicians</a>
+                <li>
+                  <a href="/#">Technicians</a>
                 </li>
-                <li style = {{ marginBottom: '10px' }}>
-                  <a href="#" style = {{ color: '#ffffff', textDecoration: 'none'}}>Appointments</a>
+                <li>
+                  <a href="/#">Appointments</a>
                 </li>
-                <li style = {{ marginBottom: '10px' }}>
-                  <a href="#" style = {{ color: '#ffffff', textDecoration: 'none'}}>Settigns</a>
+                <li>
+                  <a href="/#">Settigns</a>
                 </li>
               </h4>
             </ol>

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import propTypes from 'prop-types';
+import '../css/BoilerItem.css';
 
 export class BoilerItem extends Component {
     render() {
         return (
-            <tr style={{height: '40px', textAlign: 'center'}}>
+            <tr>
                 <td>{this.props.boiler.id}</td>
                 <td>{this.props.boiler.description}</td>
                 <td>{this.props.boiler.boilerType}</td>
@@ -15,7 +16,7 @@ export class BoilerItem extends Component {
                     <button onClick={() => console.log(this.props.boiler.id)}>Update</button>
                 </td>
                 <td>
-                    <button onClick={() => console.log(this.props.boiler.id)}>Delete</button>
+                    <button onClick={this.props.deleteBoiler.bind(this,this.props.boiler.id)}>Delete</button>
                 </td>
             </tr>
         )

@@ -1,15 +1,15 @@
 import React from 'react';
-import '../css/updateForm.css';
+import '../css/UpdateForm.css';
 
 export default function UpdateForm() {
     return (
-        <div id="myModal" className="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
+        <div id="myModal">
+            <div id="modalContent">
+                <span id="close">&times;</span>
                 <h4>
                     Update form
                 </h4>
-                <ul id="list">
+                <ul>
                     <li>
                         <label for="id">Id:</label>
                         <input type="number" id="id" placeholder="....."/>

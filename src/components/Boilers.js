@@ -9,6 +9,7 @@ class Boilers extends Component {
       <div>
         <table>
           <caption>Boilers Records</caption>
+          <tbody>
             <tr>
               <th>Id</th>
               <th>Description</th>
@@ -19,8 +20,7 @@ class Boilers extends Component {
               <th>Update</th>
               <th>Delete</th>
             </tr>
-          <tbody>
-            {this.props.boilers.map(boiler => <BoilerItem key={boiler.id} boiler={boiler} deleteBoiler={this.props.deleteBoiler}/>)}
+            {this.props.boilers.map(boiler => <BoilerItem key={boiler.id} boiler={boiler} deleteBoiler={this.props.deleteBoiler} updateBoiler={this.props.updateBoiler} />)}
           </tbody>
         </table>
       </div>

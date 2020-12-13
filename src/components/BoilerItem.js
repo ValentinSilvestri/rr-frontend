@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import propTypes from 'prop-types';
 import '../css/BoilerItem.css';
 
 export class BoilerItem extends Component {
@@ -21,10 +20,6 @@ export class BoilerItem extends Component {
             </tr>
         )
     }
-}
-
-BoilerItem.propTypes = {
-    boilers: propTypes.object.isRequired
 }
 
 export default BoilerItem

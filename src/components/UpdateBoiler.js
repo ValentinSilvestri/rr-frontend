@@ -1,7 +1,7 @@
 import React , { Component } from 'react';
 import '../css/UpdateBoiler.css';
 
-class UpdateBoiler extends Component {
+class UpdateForm extends Component {
 
     state = {
         id: '',
@@ -18,7 +18,7 @@ class UpdateBoiler extends Component {
 
     submition = (e) => {
         e.preventDefault();
-        const newBoiler = {
+        const updatedBoiler = {
             id: this.state.id,
             description: this.state.description,
             boilerType: this.state.boilerType,
@@ -26,7 +26,7 @@ class UpdateBoiler extends Component {
             hourEventualCost: this.state.hourEventualCost,
             maintenanceRate: this.state.maintenanceRate
         }
-        this.props.updateBoiler(newBoiler);
+        this.props.updateForm(updatedBoiler);
         this.setState( {
             id: '',
             description: '',
@@ -45,6 +45,10 @@ class UpdateBoiler extends Component {
                         Update Boiler: 
                     </h3>
                     <ul>
+                        <li>
+                            <label htmlFor="id">Id:</label>
+                            <input type="number" id="id" placeholder="....." value={this.state.id} onChange={this.changeValue} required/>
+                        </li>
                         <li>
                             <label htmlFor="description">Description:</label>
                             <input type="text" id="description" placeholder="....." value={this.state.description} onChange={this.changeValue} required/>
@@ -73,4 +77,4 @@ class UpdateBoiler extends Component {
     }
 }
 
-export default UpdateBoiler;
+export default UpdateForm;

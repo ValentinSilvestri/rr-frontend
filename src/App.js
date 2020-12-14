@@ -14,11 +14,14 @@ class App extends Component {
     this.setState({boilers: [...this.state.boilers.filter(boiler => boiler.id !== id)] });
   }
 
-  updateBoiler = (boilerUpdate) => {
+  updateButton = (boiler) => console.log(boiler);
+
+  updateForm = (updatedBoiler) => {
     this.setState({boilers: [...this.state.boilers.map(boiler => {
-      if(boiler.id === boilerUpdate.id) {
-        boiler = boilerUpdate;
+      if(parseInt(boiler.id) === parseInt(updatedBoiler.id)) {
+        boiler = updatedBoiler;
       }
+      return boiler;
     })]});
   }
 
@@ -37,13 +40,13 @@ class App extends Component {
           <div id = 'div2'>
             <div id = 'div3'>
               <Header />
-              <Boilers boilers={this.state.boilers} deleteBoiler={this.deleteBoiler} updateBoiler={this.updateBoiler}/>
+              <Boilers boilers={this.state.boilers} deleteBoiler={this.deleteBoiler} updateButton={this.updateButton}/>
             </div>
           </div>
         </div>
         <div style = {{ display: 'flex', justifyContent: 'center', margin:'25px'}}>
         <AddBoiler addBoiler={this.addBoiler} />
-        <UpdateBoiler updateBoiler={this.updateBoiler} />
+        <UpdateBoiler updateForm={this.updateForm} />
         </div>
       </div>
     );

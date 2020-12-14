@@ -12,7 +12,7 @@ export class BoilerItem extends Component {
                 <td>{this.props.boiler.hourEventualCost}</td>
                 <td>{this.props.boiler.maintenanceRate}</td>
                 <td>
-                    <button onClick={() => console.log(this.props.boiler.id)}>Update</button>
+                    <button onClick={this.props.updateButton.bind(this,this.props.boiler)}>Update</button>
                 </td>
                 <td>
                     <button onClick={this.props.deleteBoiler.bind(this,this.props.boiler.id)}>Delete</button>
